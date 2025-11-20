@@ -3,62 +3,43 @@
 {% block title %} Travel Agency{% endblock %}
 
 {% block content %}
-<!-- Hero Carousel -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <!-- Carousel Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
-  <!-- Carousel Inner -->
-  <div class="carousel-inner">
-    <!-- Spring Slide -->
-    <div class="carousel-item active">
-      <img src="{{ url_for('static', filename='images/spring.jpg') }}" class="d-block w-100" alt="Spring">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Spring</h5>
-        <!-- Call to Action (CTA) Button -->
-        <a href="{{ url_for('spring') }}" class="btn btn-primary">Book Your Spring Getaway</a>
-      </div>
+<!-- Hero Section -->
+<div class="hero-section text-center text-white">
+    <img src="{{ url_for('static', filename='images/spring-anime.png') }}" class="d-block w-100" alt="Spring">
+    <div class="hero-caption">
+        <h1 class="display-4">Spring: Renew & Explore</h1>
+        <p class="lead">Cherry blossoms, city breaks, and gentle hikes.</p>
+        <a href="{{ url_for('spring') }}" class="btn btn-primary btn-lg">Book Spring Getaway</a>
     </div>
-    <!-- Summer Slide -->
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/summer.jpg') }}" class="d-block w-100" alt="Summer">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Summer</h5>
-        <!-- Call to Action (CTA) Button -->
-        <a href="{{ url_for('summer') }}" class="btn btn-primary">Start Your Summer Adventure</a>
-      </div>
+</div>
+
+<!-- Features Section -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">ATOL Protected</h5>
+                    <p class="card-text">Book with confidence and travel with peace of mind.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Handpicked Destinations</h5>
+                    <p class="card-text">Seasonal experiences curated by local experts.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Flexible Booking</h5>
+                    <p class="card-text">Transparent pricing and helpful travel advisors.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Autumn Slide -->
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/autumn.jpg') }}" class="d-block w-100" alt="Autumn">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Autumn</h5>
-        <!-- Call to Action (CTA) Button -->
-        <a href="{{ url_for('autumn') }}" class="btn btn-primary">Shop Autumn Styles</a>
-      </div>
-    </div>
-    <!-- Winter Slide -->
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='images/winter.jpg') }}" class="d-block w-100" alt="Winter">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Winter</h5>
-        <!-- Call to Action (CTA) Button -->
-        <a href="{{ url_for('winter') }}" class="btn btn-primary">Discover Winter Wonders</a>
-      </div>
-    </div>
-  </div>
-  <!-- Carousel Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 {% endblock %}
